@@ -1,7 +1,8 @@
-package com.aexp.reports.models.notifications;
+package com.aexp.reports.contract.dto.notification;
 
-public class NotificationModel {
+public class NotificationDto {
     private String id;
+    private String userId;
     private String title;
     private String content;
 
@@ -9,10 +10,11 @@ public class NotificationModel {
     private int state;
 
 
-    public NotificationModel() { this("", "", "", 0); }
+    public NotificationDto() { this("","", "", "", 0); }
 
-    public NotificationModel(String id, String title, String content, int state){
+    public NotificationDto(String id, String userId, String title, String content, int state){
         this.id = id;
+        this.userId = userId;
         this.title = title;
         this.content = content;
         this.state = state;
@@ -25,6 +27,9 @@ public class NotificationModel {
         this.id = id;
     }
 
+    public String getUserId() { return userId; }
+
+    public void setUserId(String userId) { this.userId = userId; }
     public String getTitle() {
         return title;
     }

@@ -1,4 +1,4 @@
-package com.aexp.reports;
+package com.aexp.reports.api;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
