@@ -1,10 +1,7 @@
-package com.aexp.reports.servicesImpl.notification;
+package com.aexp.reports.services.notification;
 
-import com.aexp.reports.api.models.notifications.NotificationModel;
 import com.aexp.reports.contract.dto.ServiceResponse;
 import com.aexp.reports.contract.dto.notification.NotificationDto;
-import com.aexp.reports.services.notification.NotificationService;
-import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
