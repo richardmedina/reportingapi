@@ -8,7 +8,7 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 
 @SpringBootApplication
-@ComponentScan("com.aexp")
+@ComponentScan("com.aexp.reports")
 public class ReportsApplication {
 
 	@Bean
