@@ -12,6 +12,6 @@ CREATE TABLE `user_accounts` (
 	PRIMARY KEY(`id`)
 );
 
-INSERT INTO `users_accounts` (`user_name`, `password`, `first_name`, `last_name`) 
+INSERT INTO `user_accounts` (`user_name`, `password`, `first_name`, `last_name`) 
 	VALUES ('admin', 'admin', 'Administrator', 'Admin')
 
