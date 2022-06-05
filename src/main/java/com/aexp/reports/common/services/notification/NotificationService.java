@@ -1,4 +1,4 @@
-package com.aexp.reports.services.notification;
+package com.aexp.reports.common.services.notification;
 
 import com.aexp.reports.contract.dto.ServiceResponse;
 import com.aexp.reports.contract.dto.notification.NotificationDto;

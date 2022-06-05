@@ -1,18 +1,15 @@
 package com.aexp.reports.api.controllers;
 
-import com.aexp.reports.api.models.notifications.NotificationModel;
 import com.aexp.reports.beans.mapper.Mapper;
 import com.aexp.reports.contract.dto.StatusCode;
-import com.aexp.reports.services.notification.NotificationService;
-import org.modelmapper.ModelMapper;
+import com.aexp.reports.common.services.notification.NotificationService;
+import com.aexp.reports.contract.model.notification.NotificationModel;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import java.util.ArrayList;
 import java.util.List;
-import java.util.UUID;
 
 @RestController
 @RequestMapping("api/notifications")

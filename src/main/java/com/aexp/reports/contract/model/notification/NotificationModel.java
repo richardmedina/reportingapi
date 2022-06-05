@@ -1,4 +1,4 @@
-package com.aexp.reports.api.models.notifications;
+package com.aexp.reports.contract.model.notification;
 
 public class NotificationModel {
     private String id;

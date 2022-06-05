@@ -7,6 +7,9 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 
+import java.sql.Connection;
+import java.sql.DriverManager;
+
 @SpringBootApplication
 @ComponentScan("com.aexp.reports")
 public class ReportsApplication {

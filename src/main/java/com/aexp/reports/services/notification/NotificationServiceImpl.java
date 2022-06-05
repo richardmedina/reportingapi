@@ -1,5 +1,6 @@
 package com.aexp.reports.services.notification;
 
+import com.aexp.reports.common.services.notification.NotificationService;
 import com.aexp.reports.contract.dto.ServiceResponse;
 import com.aexp.reports.contract.dto.notification.NotificationDto;
 import org.springframework.stereotype.Service;
@@ -26,6 +27,6 @@ public class NotificationServiceImpl implements NotificationService {
 
             notifications.add(notification);
         }
-        return new ServiceResponse(notifications);
+        return new ServiceResponse<>(notifications);
     }
 }
