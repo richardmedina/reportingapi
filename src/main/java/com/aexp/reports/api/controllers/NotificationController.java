@@ -4,6 +4,7 @@ import com.aexp.reports.beans.mapper.Mapper;
 import com.aexp.reports.contract.dto.StatusCode;
 import com.aexp.reports.common.services.notification.NotificationService;
 import com.aexp.reports.contract.model.notification.NotificationModel;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -29,12 +30,12 @@ public class NotificationController extends BaseController {
         var notifications = response.getResult();
 
         if (response.getStatusCode() == StatusCode.ERROR) {
-            return ResponseEntity.status(500).build();
+            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).build();
         }
 
         var result = mapper.<NotificationModel>mapToList(response.getResult());
 
 
-        return ResponseEntity.status(200).body(result);
+        return ResponseEntity.status(HttpStatus.OK).body(result);
     }
 }

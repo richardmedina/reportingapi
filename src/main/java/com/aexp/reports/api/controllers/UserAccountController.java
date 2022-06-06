@@ -1,5 +1,6 @@
 package com.aexp.reports.api.controllers;
 
+import com.aexp.reports.beans.mapper.Mapper;
 import com.aexp.reports.common.services.useraccount.UserAccountService;
 import com.aexp.reports.contract.model.useraccount.UserAccountModel;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -18,14 +19,17 @@ import java.util.List;
 public class UserAccountController {
     @Autowired
     private UserAccountService userAccountService;
+    @Autowired
+    private Mapper mapper;
 
     @GetMapping
     public ResponseEntity<List<UserAccountModel>> get(){
 
-        var result = userAccountService.getAll();
+        var response = userAccountService.getAll();
+        var result = mapper.<UserAccountModel>mapToList(response.getResult());
 
-        List<UserAccountModel> accounts = new ArrayList<>();
+        //if(response.getResult().size() == 1) return new ResponseEntity<>(null, HttpStatus.NOT_FOUND);
 
-        return new ResponseEntity<>(accounts, HttpStatus.OK);
+        return new ResponseEntity<>(result, HttpStatus.OK);
     }
 }
