@@ -6,8 +6,13 @@ import java.util.List;
 
 public interface UserAccountRepository {
 
-    List<UserAccountData> get();
+    List<UserAccountData> getAll();
+
+    /**
     UserAccountData getById(String userName);
+
     void Delete(String userName);
     void Update(String userName, UserAccountData userAccount);
+
+     **/
 }

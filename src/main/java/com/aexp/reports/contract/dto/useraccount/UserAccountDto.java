@@ -1,24 +1,15 @@
-package com.aexp.reports.contract.domain.useraccount;
+package com.aexp.reports.contract.dto.useraccount;
 
-public class UserAccountData {
-    private long id;
+public class UserAccountDto {
+    private int id;
     private String userName;
     private String password;
     private String firstName;
     private String lastName;
-
-    public UserAccountData(long id, String userName, String password, String firstName, String lastName) {
-        this.id = id;
-        this.userName = userName;
-        this.password = password;
-        this.firstName = firstName;
-        this.lastName = lastName;
-    }
-
-    public long getId() {
+    public int getId() {
         return id;
     }
-    public void setId(long id) {
+    public void setId(int id) {
         this.id = id;
     }
 

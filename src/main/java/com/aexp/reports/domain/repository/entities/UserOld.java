@@ -1,4 +1,4 @@
-package com.aexp.reports.domain.entities;
+package com.aexp.reports.domain.repository.entities;
 
 import javax.persistence.*;
 

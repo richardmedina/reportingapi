@@ -1,20 +1,11 @@
-package com.aexp.reports.contract.domain.useraccount;
+package com.aexp.reports.contract.model.useraccount;
 
-public class UserAccountData {
+public class UserAccountModel {
     private long id;
     private String userName;
     private String password;
     private String firstName;
     private String lastName;
-
-    public UserAccountData(long id, String userName, String password, String firstName, String lastName) {
-        this.id = id;
-        this.userName = userName;
-        this.password = password;
-        this.firstName = firstName;
-        this.lastName = lastName;
-    }
-
     public long getId() {
         return id;
     }
